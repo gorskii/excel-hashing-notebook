@@ -28,7 +28,9 @@ jupyter notebook
 
 Загрузите и установите [miniconda](https://docs.conda.io/en/latest/miniconda.html) — это удобный компактный дистрибутив [Anaconda](https://www.anaconda.com/), включающий в себя [conda](https://conda.io), Python и немного дополнительных утилит. conda — это просто менеджер пакетов. С его помощью можно устанавливать и удалять библиотеки, вроде [pandas](https://pandas.pydata.org/) или [jupyter](https://jupyter.org/). Инструкции для старта доступны [по ссылке](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/getting-started.html#before-you-start).
 
-Создайте [виртуальное окружение](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/getting-started.html#managing-environments) с именем `hashing` и установите пакеты `pandas`, `notebook`, `openpyxl`:
+Если вы используете Windows, после установки вы найдёте в меню «Пуск» ярлык с названием `Anaconda Prompt (miniconda3)`. Запустите его — откроется терминал с командной оболочкой Anaconda.
+
+Создайте [виртуальное окружение](https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/getting-started.html#managing-environments) с именем `hashing` или любым другим именем и установите пакеты `pandas`, `notebook`, `openpyxl`:
 ```
 conda create --name hashing pandas notebook openpyxl
 ```
@@ -45,9 +47,9 @@ conda install pandas notebook openpyxl
 conda info --envs
 ```
 
-Соответственно, для повторного запуска не нужно заново всё устанавливать.
+Соответственно, для повторного запуска ноутбуков в дальнейшем, не нужно заново всё устанавливать.
 
-Нужно запустить с ярлыка командную оболочку Anaconda, склонировать репозиторий с ноутбуком, перейти в каталог с ноутбуком, активировать виртуальное окружение, запустить сервер Jupyter:
+Нужно склонировать репозиторий с ноутбуком, перейти в каталог с ноутбуком, активировать виртуальное окружение, запустить сервер Jupyter:
 ```
 git clone https://github.com/gorskii/excel-hashing-notebook.git
 cd excel-hashing-notebook
@@ -62,9 +64,9 @@ jupyter notebook
 
 Документацию по установке и работе с Jupyter можно найти [здесь](https://jupyter.org/index.html) в соответствующих разделах.
 
-[Туториал](https://pandas.pydata.org/pandas-docs/stable/getting_started/index.html) по Pandas. [Взгляд](https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_spreadsheets.html#compare-with-spreadsheets) с точки зрения пользователя Excel.
+[Туториал](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html) по Pandas. [Взгляд](https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_spreadsheets.html#compare-with-spreadsheets) с точки зрения пользователя Excel.
 
-[Ссылка](https://yuthakarn.medium.com/hashing-sha512-on-pandas-dataframe-more-effectively-d5e906272095) на исходную статью о хешировании, код из которой был использован.
+[Ссылка](https://yuthakarn.medium.com/hashing-sha512-on-pandas-dataframe-more-effectively-d5e906272095) на исходную статью на Medium об эффективном способе хеширования, решение из которой легло в основу этого ноутбука. Автор статьи — [Heang Yuthakarn Arngmaneekul](https://yuthakarn.medium.com/).
 
 [hashlib](https://docs.python.org/3/library/hashlib.html) — набор инструментов для хэширования из стандартной библиотеки Python.
 
